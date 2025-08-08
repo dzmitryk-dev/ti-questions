@@ -1,8 +1,9 @@
 import kotlinx.coroutines.*
 
-suspend fun main(): Unit = coroutineScope {
+fun main() {
     var proccessedItems = 0
-    coroutineScope {
+
+    runBlocking {
         withContext(Dispatchers.Default) {
             repeat(1000) {
                 launch {

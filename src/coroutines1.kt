@@ -1,6 +1,6 @@
 import kotlinx.coroutines.*
 
-suspend fun main(): Unit = coroutineScope {
+fun main(): Unit = runBlocking {
     launch {
         Thread.sleep(3000) //emulate long work
         println("1")
